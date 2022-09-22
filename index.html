@@ -7,5 +7,21 @@
   </head>
   <body>
     <span>Hello World</span>
+
+    <script>
+      const obj = {
+        traditionalFunction: function () {
+          console.log('traditional function', this);
+        },
+        arrowFunction: () => {
+          console.log('arrow function', this);
+        },
+        lastName: 'Doe',
+      };
+
+      console.log('this environment', this);
+      obj.arrowFunction();
+      obj.traditionalFunction();
+    </script>
   </body>
 </html>
